@@ -1,0 +1,178 @@
+.edui-container {
+  position: relative;
+  border: 1px solid #d4d4d4;
+  background-color: #fff;
+}
+
+.edui-container .edui-toolbar {
+  position: relative;
+  width: auto;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  z-index: 99999;
+}
+
+.edui-toolbar .edui-btn-toolbar {
+  position: relative;
+  padding: 5px;
+}
+
+.edui-container .edui-editor-body {
+  background-color: #fff;
+}
+
+.edui-editor-body .edui-body-container p {
+  margin: 5px 0;
+}
+
+.edui-editor-body .edui-body-container {
+  border: 0;
+  outline: none;
+  cursor: text;
+  padding: 0 10px 0;
+  overflow: auto;
+  display: block;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.edui-editor-body.focus {
+  border: 1px solid #5c9dff
+}
+
+.edui-editor-body table {
+  margin: 10px 0 10px;
+  border-collapse: collapse;
+  display: table;
+}
+
+.edui-editor-body td {
+  padding: 5px 10px;
+  border: 1px solid #DDD;
+}
+
+.edui-editor-body iframe.mathquill-embedded-latex {
+  border: 0px;
+  padding: 0px;
+  display: inline;
+  margin: 0px;
+  background: none;
+  vertical-align: middle;
+}
+
+.edui-container .edui-editor-body strong,
+.edui-container .edui-editor-body b {
+  font-weight: bold !important;
+}
+
+.edui-container .edui-editor-body i,
+.edui-container .edui-editor-body cite,
+.edui-container .edui-editor-body em,
+.edui-container .edui-editor-body var,
+.edui-container .edui-editor-body address,
+.edui-container .edui-editor-body dfn {
+  font-style: italic !important;
+}
+
+.edui-container .edui-editor-body p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.edui-container .edui-editor-body h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.edui-container .edui-editor-body h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.edui-container .edui-editor-body h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.edui-container .edui-editor-body h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.edui-container .edui-editor-body h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.edui-container .edui-editor-body h6 {
+  display: block;
+  font-size: 0.67em;
+  margin-block-start: 2.33em;
+  margin-block-end: 2.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.edui-container .edui-editor-body li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.edui-container .edui-editor-body ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.edui-container .edui-editor-body ul,
+.edui-container .edui-editor-body menu,
+.edui-container .edui-editor-body dir {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.edui-container .edui-editor-body img {
+  width: 100%;
+}
+
+.edui-container .edui-editor-body textarea  {
+  width:100% !important;
+}

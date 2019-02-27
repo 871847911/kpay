@@ -1,0 +1,957 @@
+@import "./mixins.styl"
+@import "~assets/styles/varibles"
+
+ // 全局修改
+ .el-menu-item, .el-submenu__title
+    height .6rem
+    line-height .6rem
+.el-submenu .el-menu-item
+    height .4rem
+    line-height: .4rem
+.el-submenu-active
+    .first-title
+        font-weight 600
+        color #4a4a4a !important
+ .el-tooltip__popper, .el-tooltip__popper.is-dark
+    color #9B9B9B
+    background-color #ffffff !important
+.el-tooltip__popper[x-placement^=top] .popper__arrow,
+.el-tooltip__popper[x-placement^=top] .popper__arrow::after
+    border-top-color #ffffff
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner
+    background-color $color-theme
+    border-color $color-theme
+.el-checkbox__inner:hover
+    border-color $color-theme
+.el-checkbox__input.is-focus .el-checkbox__inner
+    border-color $color-theme
+.el-dialog__body, .dialog-footer
+    display flex
+    justify-content center
+.dialog-footer
+    .confirm-btn, .cancel-btn
+      width 1.2rem
+      color #ffffff
+    .confirm-btn
+        color #ffffff
+        background-color $color-theme
+        &:active
+            color #ffffff
+            border-color $color-theme
+    .confirm-btn:focus, .confirm-btn:hover
+        color #ffffff
+        border-color $color-theme
+        background-color $color-theme
+    .cancel-btn
+        background-color #ffffff
+        color #606266
+        &:active
+            color #606266
+            border-color #dcdfe6
+    .cancel-btn:focus, .cancel-btn:hover
+        color #606266
+        border-color #dcdfe6
+        background-color #ffffff
+.el-form--label-top .el-form-item__label
+  padding 0
+.el-radio__input.is-checked .el-radio__inner
+  border-color $color-theme
+  background $color-theme
+.el-radio__input.is-checked+.el-radio__label
+  color $color-theme
+.el-radio__inner:hover
+  border-color $color-theme
+.el-select .el-input.is-focus .el-input__inner
+  border-color $color-theme
+.el-textarea__inner:focus
+  border-color $color-theme
+
+// 局部修改
+.vip-grow-rules
+    .el-input--medium .el-input__inner
+        height 40px !important
+        line-height 40px !important
+.el-account-dialog
+    .el-dialog--center
+        height 3.42rem
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        border-radius .05rem
+        .el-dialog__header
+            display none
+        .el-dialog__body
+            margin 0
+            padding 0
+            margin-bottom .4rem
+            columnFlex()
+            .head
+                display block
+                height .95rem
+                width .95rem
+                margin-bottom .24rem
+                .iconfont
+                    font-size .95rem
+                    color #FF6767
+            h2
+                fontCenter(.28rem)
+                font-size .2rem
+                color rgba(0,0,0,0.85)
+                margin-bottom .15rem
+            h3
+                fontCenter(.2rem)
+                font-size .14rem
+                color #9B9B9B
+        .el-dialog__footer
+            margin 0
+            padding 0
+            width 100%
+            .dialog-footer
+                width 100%
+                display block
+                height .28rem
+                .cancel,.active-shop
+                    margin 0
+                    padding 0
+                    width 1rem
+                    height .28rem
+                    color $color-theme
+                    border .01rem solid $color-theme
+                .active-shop
+                    margin-left .2rem
+                    color #fff
+                    background $color-theme
+.el-categroy-dialog
+    .el-dialog--center
+        display flex
+        flex-direction column
+        justify-content flex-start
+        align-items center
+        border-radius .05rem
+        padding .32rem .4rem
+        box-sizing border-box
+        .el-dialog__header
+            display none
+        .el-dialog__body
+            padding 0
+            width 100%
+            margin-bottom .4rem
+            .category-head
+                height .28rem
+                line-height .28rem
+                color rgba(0,0,0,0.85)
+                font-size .2rem
+                width 3rem
+                margin-bottom .1rem
+                display block
+            .category-middle
+                height .4rem
+                line-height .4rem
+                width 3rem
+                box-sizing border-box
+                border .01rem solid #ECECEC
+                border-radius .05rem
+                padding-left .2rem
+                font-size .14rem
+            .category-suggest
+                height .2rem
+                line-height .2rem
+                font-size .14rem
+                color #9B9B9B
+                margin .1rem 0
+            .category-upload
+                height 1rem
+                width 100%
+                display flex
+                justify-content flex-start
+                align-items center
+                #pickfiles
+                    cursor pointer
+                    width 1rem
+                    height 1rem
+                    box-sizing border-box
+                    border .01rem dashed rgba(0,0,0,0.15)
+                    border-radius .04rem
+                    columnFlex()
+                    background rgba(0,0,0,0.02)
+                    &:hover
+                        border .01rem dashed $color-theme
+                    .el-icon-plus
+                        margin .2rem 0 .14rem
+                        font-size .24rem
+                        color rgba(0,0,0,0.45)
+                        font-weight 600
+                    .txt
+                        font-size .14rem
+                        fontCenter(.22rem)
+                        color rgba(0,0,0,0.65)
+                    img
+                        width 100%
+                        height 100%
+        .el-dialog__footer
+            margin 0
+            padding 0
+            width 100%
+            .category-footer
+                width 100%
+                display block
+                height .28rem
+                .cancel,.active-shop
+                    margin 0
+                    padding 0
+                    width 1rem
+                    height .28rem
+                    color $color-theme
+                    border .01rem solid $color-theme
+                .active-shop
+                    margin-left .2rem
+                    color #fff
+                    background $color-theme
+.el-addcourse-dialog
+    .el-dialog--center
+        height 4.1rem
+        .el-dialog__header
+            .el-dialog__headerbtn
+                height .14rem
+                width .14rem
+                .el-dialog__close
+                    height 100%
+                    width 100%
+                    color #4A4A4A
+                    font-weight 600
+        .el-dialog__body
+            height .25rem
+            padding .1rem .3rem .44rem
+            .course-head
+                height 100%
+                line-height .25rem
+                color #4A4A4A
+                font-weight 600
+                font-size .18rem
+        .el-dialog__footer
+            .course-footer
+                width 8rem
+                display flex
+                justify-content center
+                align-items center
+                .course
+                    width 3.8rem
+                    height 2.2rem
+                    background #FAFAFA
+                    border-radius .04rem
+                    color #9B9B9B
+                    border none
+                    box-sizing border-box
+                    &:hover
+                        color $color-theme
+                        border .01rem solid $color-theme
+                    span
+                        display flex
+                        flex-direction column
+                        justify-content center
+                        align-items center
+                        .icon
+                            font-size .66rem
+                            margin-bottom .27rem
+                        .name
+                            font-size .18rem
+                            font-weight 600
+                .special-course
+                    margin-left .2rem
+.el-menu-demo
+    .el-submenu
+        .el-menu-item
+            &:hover
+                background-color: #F3FBFB !important
+        .el-submenu__title
+            &:hover
+                background-color: #F3FBFB !important
+        .el-menu,.el-menu--inline
+            .el-link
+                color #9B9B9B!important
+                .el-menu-item
+                    width 100%
+                    min-width 280px
+                    &:hover
+                        .iconfont
+                            border .01rem solid #54d0ce
+                    .iconfont
+                        display inline-block
+                        width .05rem
+                        height .05rem
+                        background rgb(56, 57, 87)
+                        border-radius 50%
+                        margin-right .12rem
+                        border .01rem solid #9B9B9B
+                        box-sizing border-box
+    .el-submenu-active
+        .el-submenu__title
+            // background-color #F3FBFB !important
+            .first-title,.icon-first-group
+                color #54d0ce
+            .el-submenu__icon-arrow
+                color #54d0ce
+        .el-menu,.el-menu--inline
+            .el-link
+                .el-menu-item
+                    color #9B9B9B
+                    &:hover
+                        background-color #F3FBFB !important
+                .router-link-active
+                    position relative
+                    color #1F2724!important
+                    background-color #F0FDFA !important
+                    &::before
+                        content ""
+                        width .04rem
+                        height .4rem
+                        background-color #6CDDC7
+                        position absolute
+                        left 0
+                        top 0
+                    &:hover
+                        color #1F2724!important
+                        .iconfont
+                            border none
+                    .iconfont
+                        background #54d0ce
+                        border none
+                .router-link-unactive
+                    color rgb(136, 136, 136) !important
+.el-badge
+    .is-dot
+        top .1rem
+        right -0.02rem!important
+        height .06rem
+        width .06rem
+        background $color-theme!important
+.list-category, .list-active, .list-thead-gray
+    .el-table
+        thead,tbody
+            color #4A4A4A
+            tr
+                text-align center
+                height .6rem
+                .is-leaf
+                    font-weight normal
+                    background #F9FAF9
+                    border none
+                th
+                    text-align center
+            .el-table__row--striped
+                td
+                    background #F9FAF9
+            .el-table__row
+                height .6rem
+                td
+                    color #4A4A4A
+                    font-size .14rem
+                    border none
+.list-course-common
+    .el-table thead,tbody .el-table__row td:nth-of-type(1)
+        .cell
+            display flex
+            justify-content center
+            align-items center
+            cursor pointer
+            .left
+                display block
+                height .85rem
+                width .85rem
+                background #D8D8D8
+                margin-right .15rem
+            .right
+                width 1.35rem
+                height .85rem
+                display flex
+                flex-direction column
+                justify-content flex-start
+                align-items flex-start
+                .right-one
+                    height .2rem
+                    line-height .2rem
+                    font-size .14rem
+                    color #4A4A4A
+                    width 1.2rem
+                    ellipsis()
+                    text-align left
+                .right-two
+                    height .17rem
+                    background $color-theme
+                    line-height .17rem
+                    font-size .12rem
+                    border-radius .09rem
+                    width .58rem
+                    color #fff
+                    margin .05rem 0 .09rem
+                .right-three,.right-four
+                    height .17rem
+                    line-height .17rem
+                    font-size .12rem
+                    color #9B9B9B
+.list-category-my
+    .el-table
+        .el-table__body-wrapper
+            overflow-x hidden
+    .el-table
+        thead,tbody
+            color #4A4A4A
+            tr
+                text-align center
+                height 1.25rem
+                .is-leaf
+                    font-weight normal
+                    background #F9FAF9
+                    border none
+                th
+                    text-align center
+            .el-table__row--striped
+                td
+                    background #F9FAF9
+            .el-table__row
+                height 1.25rem
+                td
+                    color #4A4A4A
+                    font-size .14rem
+                    border none
+                    &:nth-of-type(2)
+                        .cell
+                            display flex
+                            justify-content center
+                            align-items center
+                            cursor pointer
+                            .left
+                                display block
+                                height .85rem
+                                width .85rem
+                                background #D8D8D8
+                                margin-right .15rem
+                            .right
+                                width 1.35rem
+                                height .85rem
+                                display flex
+                                flex-direction column
+                                justify-content flex-start
+                                align-items flex-start
+                                .right-one
+                                    height .2rem
+                                    line-height .2rem
+                                    font-size .14rem
+                                    color #4A4A4A
+                                    width 1.2rem
+                                    ellipsis()
+                                    text-align left
+                                .right-two
+                                    height .17rem
+                                    background $color-theme
+                                    line-height .17rem
+                                    font-size .12rem
+                                    border-radius .09rem
+                                    width .58rem
+                                    color #fff
+                                    margin .05rem 0 .09rem
+                                .right-three,.right-four
+                                    height .17rem
+                                    line-height .17rem
+                                    font-size .12rem
+                                    color #9B9B9B
+        thead
+            tr
+                height .6rem
+            .el-table__row
+                height .6rem
+
+
+.list-style
+    .el-table
+        .el-table__body-wrapper
+            overflow-x hidden
+    .el-table
+        thead,tbody
+            color #4A4A4A
+            tr
+                text-align center
+                height 1.25rem
+                .is-leaf
+                    font-weight normal
+                    background #F9FAF9
+                    border none
+                th
+                    text-align center
+            .el-table__row--striped
+                td
+                    background #F9FAF9
+            .el-table__row
+                height 1.25rem
+                td
+                    color #4A4A4A
+                    font-size .14rem
+                    border none
+                    .cell
+                        display flex
+                        justify-content center
+                        align-items center
+                        cursor pointer
+        thead
+            tr
+                height .6rem
+            .el-table__row
+                height .6rem
+
+
+
+.el-pagination
+    height .28rem
+    margin 0
+    padding 0
+    .btn-prev,.btn-next
+        color #666666
+        border .01rem solid #D9D9D9
+        box-sizing border-box
+        border-radius .04rem
+        background #fff!important
+        margin-right : 8px;
+        &:hover
+            color #6CDDC7!important
+    .el-pager
+        .number,.more
+            background #fff!important
+            border .01rem solid #D9D9D9
+            border-radius .04rem
+            margin: 0 8px 0 8px;
+            &:hover
+                color #6CDDC7!important
+        .active
+            background #6CDDC7!important
+            border none
+            &:hover
+                color #fff!important
+    .el-pagination__sizes
+        .is-focus,.el-input--suffix
+            .el-input__inner
+                border .01rem solid #D9D9D9
+                &:hover
+                    border .01rem solid #6CDDC7
+    .el-pagination__jump
+        .el-input__inner
+            border .01rem solid #D9D9D9
+            &:focus
+                border .01rem solid #6CDDC7
+.el-select-dropdown
+    .el-scrollbar
+        .selected
+            color #6CDDC7!important
+.el-dropdown-menu
+    width 3rem
+
+.head-dropdown-item
+    width 1.34rem!important
+    box-shadow:0px 2px 27px 0px rgba(0,0,0,0.3)
+    .el-dropdown-menu__item
+        font-size .14rem
+        padding 0 .12rem
+        &:hover
+            color #6CDDC7!important
+        .icon
+            margin-right .04rem
+            font-size .14rem
+.check-head-dropdown-item
+    right 0 !important;
+    width 1rem!important;
+    box-shadow:0px 2px 27px 0px rgba(0,0,0,0.3)
+    .el-dropdown-menu__item
+        font-size .14rem
+        padding 0 .12rem
+        color: #9B9B9B
+        &:hover
+            color #6CDDC7!important
+        .icon
+            margin-right .04rem
+            font-size .14rem
+// .search
+//     .el-select
+//         width 3.45rem
+//         height .28rem
+//         .el-input
+//             height .28rem
+//             .el-input__inner
+//                 border-color #D9D9D9!important
+//                 border-radius .04rem
+//                 height .28rem
+//         .is-focus
+//             .el-input__inner
+//                 border-color $color-theme!important
+//     .el-select-custom
+//         width 3rem
+//         height .4rem
+//         .el-input
+//             height .4rem
+//             .el-input__inner
+//                 height .4rem
+//                 border none
+//             .el-input__icon
+//                 color #666666
+.course-radio
+    .is-checked
+        .el-radio__label
+            color $color-theme!important
+        .is-checked
+            height .22rem
+            width .22rem
+            .el-radio__inner
+                height 100%
+                width 100%
+                background #fff
+                border-color #AEB8BE
+                &::after
+                    height .12rem
+                    width .12rem
+                    background $color-theme
+    .el-radio
+        .el-radio__input
+            height .22rem
+            width .22rem
+            .el-radio__inner
+                height 100%
+                width 100%
+                background #fff
+                border-color #AEB8BE
+.quill-editor
+    .ql-container
+        min-height 3rem
+.el-progress
+    height .17rem
+    width 2.96rem
+    text-align center
+    line-height .17rem
+    margin-left .3rem
+.linkage,.userinfo-area
+    height .32rem
+    display flex
+    justify-content flex-start
+    align-items center
+    .el-select
+        width 1.05rem
+        border-radius .05rem
+        margin-right .15rem
+        height .32rem
+        &:nth-of-type(3)
+            margin 0
+        .el-input
+            height .32rem
+            .el-input__inner
+                height .32rem
+                border-color rgba(0,0,0,0.15)
+.userinfo-area
+    .el-select
+        width 33%
+.editor-dialog
+    .el-dialog
+        .el-dialog__header
+            padding .4rem 0 .34rem .34rem
+            .el-dialog__title
+                font-size .18rem
+                font-weight 600
+                height .25rem
+                line-height .25rem
+                color #4A4A4A
+        .el-dialog__body
+            padding 0
+            .list-name
+                height .22rem
+                line-height .22rem
+                color #4A4A4A
+                margin-left .34rem
+                margin-bottom .05rem
+                font-size .14rem
+            .list-name-input
+                height .4rem
+                line-height .4rem
+                font-size .14rem
+                color #4A4A4A
+                padding-left .15rem
+                box-sizing border-box
+                border-radius .04rem
+                border .01rem solid rgba(0,0,0,0.15)
+                margin-left .34rem
+                width 6rem
+                margin-bottom .3rem
+            .editor
+                min-height 3.64rem
+                width 9.2rem
+                margin-left .34rem
+                margin-bottom .65rem
+        .el-dialog__footer
+            padding 0
+            height .7rem
+            background #FAFAFA
+            .dialog-footer
+                height .7rem
+                display flex
+                justify-content flex-end
+                align-items center
+                width 100%
+                .el-button--default,.el-button--primary
+                    height .4rem
+                    border-radius .04rem
+                    width 1.35rem
+                    border .01rem solid $color-theme
+                    box-sizing border-box
+                    color $color-theme
+                    font-size .12rem
+                .el-button--primary
+                    margin-right .46rem
+                    margin-left .1rem
+                    background $color-theme
+                    color #fff
+.distpicker-address-wrapper
+    width 100%
+    height .32rem
+    display flex
+    justify-content flex-start
+    align-items center
+    select
+        flex-1()
+        margin-right .1rem!important
+        height .32rem!important
+        margin 0
+        padding 0!important
+        font-size .14rem!important
+        border-radius .05rem!important
+        cursor pointer
+        max-width 35%
+        &:nth-of-type(3)
+            margin-right 0!important
+        option[selected]
+            background $color-theme!important
+            color red
+
+
+// MycolumnListAdd 页面警示条
+.el-alert
+    height 0.32rem
+    margin-bottom 0.1rem
+    .el-alert__content
+        height 0.32rem
+        line-height 0.32rem
+        font-size 0.12rem
+.el-tabs
+    .el-tabs__header
+    //  background red
+
+     .el-tabs__active-bar
+        background #6CDDC7
+     .el-tabs__item.is-top
+         text-align center
+         height 0.6rem
+         line-height 0.6rem
+         color #666666
+     .el-tabs__item.is-active
+         color #6CDDC7 !important
+     .el-tabs__item:hover
+         color #6CDDC7 !important
+.el-tabs__nav-wrap::after
+    height 1px
+.el-tabs__nav-wrap.is-top::after
+    background #E6E6E6
+
+.checkbox
+    .el-checkbox-group
+        .el-checkbox-button
+            .el-checkbox-button__inner
+                background #F2F4F5
+                border 0
+                margin-right 0.03rem
+                border-radius 0.12rem
+                font-size 0.14rem
+                color #9B9B9B
+                width 0.46rem
+                height 0.24rem
+                display flex
+                justify-content center
+                align-items: center
+.radios
+ display flex
+ align-items center
+ .is-checked
+        .el-radio__label
+            color $color-theme!important
+        .is-checked
+            height .22rem
+            width .22rem
+            .el-radio__inner
+                height 100%
+                width 100%
+                background #fff
+                border-color #AEB8BE
+                &::after
+                    height .12rem
+                    width .12rem
+                    background $color-theme
+    .el-radio
+        .el-radio__input
+            height .22rem
+            width .22rem
+            .el-radio__inner
+                height 100%
+                width 100%
+                background #fff
+                border-color #AEB8BE
+
+
+.radios >>> .el-radio__inner
+    width 0.24rem !important
+    height 0.24rem !important
+
+
+.el-checkbox-button.is-checked .el-checkbox-button__inner
+    background #6CDDC7 !important
+    color #ffffff !important
+
+
+.el-checkbox-group .el-checkbox-button:nth-child(7) .el-checkbox-button__inner
+    margin-right 0 !important
+
+
+
+
+// =========================================
+//          杨贵捷
+//
+//==========================================
+
+.main_btn_bg{
+	background : #6CDDC7;
+	border : 1px solid #6CDDC7;
+}
+.el-button--primary:focus, .el-button--primary:hover{
+    background : #6CDDC7;
+	//border : 1px solid #6CDDC7;
+    color : #fff;
+}
+.el-pagination .el-pager .active{
+    color : #fff;
+}
+.el-step__head.is-finish{
+    color: #6CDDC7;
+    border-color: #6CDDC7;
+    .el-step__icon.is-text{
+        background :#6CDDC7;
+        .el-step__icon-inner{
+            color : #fff;
+        }
+    }
+}
+.el-step__title.is-finish{
+    color : #6CDDC7;
+}
+.el-form-item.is-success .el-input__inner, .el-form-item.is-success .el-input__inner:focus, .el-form-item.is-success .el-textarea__inner, .el-form-item.is-success .el-textarea__inner:focus{
+    border-color: rgba(0,0,0,0.15)
+}
+.el-input__icon.el-input__validateIcon.el-icon-circle-check{
+    color :  #6CDDC7;
+}
+.el-radio__input.is-checked .el-radio__inner{
+    border-color : #6CDDC7;
+    background : #6CDDC7;
+}
+.el-radio__input.is-checked+.el-radio__label{
+    color :  #6CDDC7;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background-color: #6CDDC7;
+    border-color: #6CDDC7;
+}
+.el-checkbox__inner:hover{
+    border-color : #6CDDC7;
+}
+.el-select .el-input.is-focus .el-input__inner{
+    border-color: #6CDDC7;
+}
+.el-select .el-input__inner:focus{
+      border-color: #6CDDC7;
+}
+.el-input.is-active .el-input__inner, .el-input__inner:focus{
+       border-color: #6CDDC7;
+}
+.el-radio-button__inner:hover {
+    color: #6CDDC7;
+}
+.el-button--text:focus, .el-button--text:hover{
+    color : inherit;
+}
+.el-collapse-item__wrap{
+    background : #F9FAF9;
+    padding : 30px 0 0 0;
+}
+.el-collapse-item__header{
+    height: 100px;
+    line-height: 100px;
+    .el-collapse-item__arrow{
+        line-height: 100px;
+    }
+}
+img, object, input, textarea, button, select{
+        vertical-align: baseline;
+}
+.el-radio-button__orig-radio:checked+.el-radio-button__inner{
+    color: #fff;
+    background-color: #6CDDC7;
+    border-color: #6CDDC7;
+}
+.el-radio-button__orig-radio:checked+.el-radio-button__inner{
+    box-shadow: -1px 0 0 0 #6CDDC7;
+}
+.el-dropdown-menu {
+    width: auto;
+}
+.el-table td, .el-table th.is-leaf{
+    border-bottom : 0;
+}
+.el-table::before{
+    height : 0;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td{
+    background : #F9FAF9;
+}
+.el-collapse-item__wrap{
+    overflow: inherit;
+}
+.el-table th{
+    background : #F9FAF9;
+}
+.el-pagination{
+    font-weight: 400;
+}
+.el-pager li{
+    min-width : 28px;
+    font-size: 12px;
+}
+.el-table .cell, .el-table th div, .el-table--border td:first-child .cell, .el-table--border th:first-child .cell{
+    padding-left : 0;
+}
+.el-table thead th{
+    color : #4A4A4A;
+    font-weight: 400;
+}
+.el-table td, .el-table th{
+    padding: 12px 5px;
+}
+.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover{
+    background : #fff;
+    color : #6CDDC7;
+}
+.el-button--primary{
+    background : #6CDDC7;
+    color : #fff;
+    border : 1px solid #6CDDC7;
+}
+.el-menu-item.is-active{
+    color: #6CDDC7;
+}
+// =========================================
+//          end
+//
+//==========================================

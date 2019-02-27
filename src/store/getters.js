@@ -1,0 +1,10 @@
+export const userId = state => state.userId
+export const roleId = state => state.roleId
+export const isActive = state => state.isActive
+export const imageHead = state => state.imageHead
+export const uploadImageHead = state => state.uploadImageHead
+export const token = state => state.token
+export const storeId = state => state.storeId
+export const realName = state => state.realName
+export const phone = state => state.phone
+export const isFirstCome = state => state.isFirstCome
